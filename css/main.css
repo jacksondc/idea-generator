@@ -74,12 +74,12 @@ body {
   position:absolute;
   top:50%;
   left:50%;
-  transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
   text-align:center;
 }
 
-h1, h2 {
+h1, h2, p {
   margin:0;
 }
 
@@ -107,14 +107,17 @@ button {
 .index {
   color:#666;
   font-weight:700;
+  position:absolute;
+  right:1rem;
+  top:1rem;
 }
 
-.ideas {
+.ideas, .idea {
   position:relative;
 }
 
-.idea {
-  position:relative;
+.idea p {
+  padding-right:3rem;
 }
 
 #idea-old {
@@ -128,17 +131,17 @@ button {
 
 
 
-
-
-
-
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-
+@media only screen and (max-width: 25em) {
+  .main {
+    position:static;
+    transform:none;
+    padding:1rem;
+    margin:0 auto;
+  }
 }
 
 @media print,
